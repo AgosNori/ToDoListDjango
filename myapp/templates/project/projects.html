@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+</head>
+
+<body>
+    {% block content %}
+    <div class="proyectosHeader">
+        <h1 class="titleProy">Projects</h1>
+        <img class="logoProy" src="{% static 'proyect.png'%}" alt="" width="50" height="50">
+    </div>
+    <div class="todos">
+        {% for project in projects %}
+        <div class="projects">
+            <h2 class="namesProyectos">{{project.name}}</h2>
+            <hr>
+        </div>
+
+    </div>
+    {% endfor%}
+    {% endblock%}
+</body>
+
+</html>

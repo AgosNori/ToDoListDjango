@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+</head>
+
+<body>
+
+    {% block content %}
+    <div class="taskHeader">
+        <h1>Tasks</h1>
+        <img class="logoTask" src="{% static 'task.png' %}" alt="" width="60" height="60">
+
+    </div>
+  
+
+    {% for task in tasks %}
+    <div class="tasks">
+        <h3> {% if task.done == False%} ⏰ {%else%} ✅ {%endif%} {{task.title}}</h3>
+        <hr>
+        <p>Descripción: {{task.description}}</p>
+        <p>Project:{{task.project.name}}</p>
+        <div class="butons">
+            <button>Delete</button>
+            <button>✅</button>
+        </div>
+    </div>
+    {%endfor%}
+    {% endblock %}
+</body>
+
+</html>

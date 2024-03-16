@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap');
+/* estilos de navbar*/
+* {
+
+    font-family: "Encode Sans", sans-serif;
+}
+
+body {
+    background-color: #202020;
+}
+
+.navbar {
+    background-color: #404040;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #929487, #A1B0AB, #C3DAC3);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navbar ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+.navbar[data-animation="bonus"] ul li a::before {
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navbar[data-animation="bonus"] ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+}
+
+/* estilos del archivo index*/
+.titulo {
+    color: white;
+}
+.index{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.textDescripcion p{
+    color: white;
+    text-align: justify;
+
+
+    width: 50%;
+}
+.textDescripcion{
+    display: flex;
+    justify-content: center;
+}
+
+/* estilos del archivo de about*/
+#about{
+    color: white;
+}
+#about .titleabout{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+#about .titleabout .info{
+    margin: 20px;
+}
+
+#about .text{
+    width: 90%;
+    margin: 30px 55px;
+    text-align: justify;
+}
+#about small{
+    display: flex;
+    justify-content: center;
+}
+
+/* estilos del archivo de projects */
+
+.proyectosHeader{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.proyectosHeader .logoProy{
+    margin: 15px;
+}
+.projects{
+    color: white;
+    width: 50%;
+}
+
+/* estilos del archivo de tasks */
+.taskHeader{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+.taskHeader .logoTask{
+    margin: 10px;
+}
+.tasks{
+    color: white;
+}
+button{
+    background-color: #303030;
+    border: none;
+    width: 60px;
+    color: white;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #2b2a2a;
+    
+}
+*{
+    color: white;
+}
+
+/* estilos al archivo de los formularios */
+
+
+
+.headerTask{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.headerTask .new{
+    margin: 10px;
+}
+.form-control{
+    width: 300px;
+    border-radius: 30px;
+    height: 50px;
+}
+
+.headerProy{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.headerProy .new{
+    margin: 10px;
+}
+.boton-new-proy{
+    background-color: #303030;
+    border: none;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border-radius: 10px;
+}

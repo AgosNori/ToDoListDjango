@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+</head>
+
+<body>
+  
+    {% block content %}
+<div id="about">
+    <div class="titleabout">
+        <h1 class="about">About this page </h1>
+        <img  class="info" src="{% static 'info.png' %}" alt="" width="40" height="40">
+    </div>
+   
+    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt esse reprehenderit architecto ullam autem ipsa itaque officia corporis, nam eius ab modi dolore aut nemo iusto sunt impedit, asperiores suscipit ducimus consequuntur? Ab eius eligendi quis ea laudantium aliquid placeat porro quam qui earum atque accusantium praesentium vel eum quia, nesciunt beatae libero ad incidunt nemo adipisci corporis animi. Modi itaque suscipit voluptatum cum labore eligendi adipisci voluptate placeat, at voluptas tempora beatae autem reprehenderit ab aliquid aspernatur inventore magnam pariatur animi, corporis fugiat porro! Rerum aliquid soluta eos molestias, praesentium eius? Ullam magnam facere tempora accusantium vitae quos fugit?</p>
+    <small>2024 © {{username}}</small> 
+</div>
+   
+    {% endblock%}
+</body>
+
+</html>

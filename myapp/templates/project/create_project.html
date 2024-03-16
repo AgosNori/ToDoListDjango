@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}">
+</head>
+
+<body>
+
+    {% block content %}
+    <div class="headerProy">
+        <h1>Create a new project</h1>
+        <img class="new" src="{% static 'new.png'%}" alt="" width="50" height="50">
+    </div>
+   
+    <form method="post">
+        {% csrf_token%}
+        {{form.as_p}}
+        <button class="boton-new-proy">Save</button>
+    </form>
+    {% endblock%}
+</body>
+
+</html>
